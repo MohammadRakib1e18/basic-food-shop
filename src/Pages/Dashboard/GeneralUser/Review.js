@@ -14,7 +14,7 @@ const Review = () => {
         setReview(newReview);
     };
     const submitReview = (e) => {
-        fetch('https://intense-temple-81535.herokuapp.com/review', {
+        fetch('https://secret-wave-59643.herokuapp.com/review', {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json'

@@ -68,10 +68,9 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false));
     };
-
     const saveUser = (email, displayName) => {
         const user = { email, displayName };
-        fetch("https://intense-temple-81535.herokuapp.com/users", {
+        fetch("https://secret-wave-59643.herokuapp.com/users", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -94,7 +93,7 @@ const useFirebase = () => {
     }, []);
 
     useEffect(() => {
-        fetch(`https://intense-temple-81535.herokuapp.com/users/${user.email}`)
+        fetch(`https://secret-wave-59643.herokuapp.com/users/${user.email}`)
             .then((res) => res.json())
             .then((data) => setIsAdmin(data));
     }, [user.email]);

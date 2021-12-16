@@ -11,7 +11,7 @@ const Purchase = () => {
     const [placeOrder, setPlaceOrder] = useState({});
 
     useEffect(() => {
-        fetch("https://intense-temple-81535.herokuapp.com/products")
+        fetch("https://secret-wave-59643.herokuapp.com/products")
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, []);
@@ -41,7 +41,7 @@ const Purchase = () => {
         setPlaceOrder(newPlaceOrder);
     };
     const handleOrder = (e) => {
-        fetch("https://intense-temple-81535.herokuapp.com/order", {
+        fetch("https://secret-wave-59643.herokuapp.com/order", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

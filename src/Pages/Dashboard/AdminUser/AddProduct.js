@@ -13,7 +13,7 @@ const AddProduct = () => {
         setProduct(newProduct);
     };
     const submitReview = (e) => {
-        fetch('https://intense-temple-81535.herokuapp.com/productAdded', {
+        fetch('https://secret-wave-59643.herokuapp.com/productAdded', {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json'

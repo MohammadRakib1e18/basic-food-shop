@@ -13,7 +13,7 @@ const MyOrders = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        const url = `https://intense-temple-81535.herokuapp.com/order?email=${user.email}`;
+        const url = `https://secret-wave-59643.herokuapp.com/order?email=${user.email}`;
         fetch(url)
             .then((res) => res.json())
             .then((data) => setOrders(data));

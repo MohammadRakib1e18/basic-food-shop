@@ -6,7 +6,7 @@ const Products = ({carCounter}) => {
     
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch("https://intense-temple-81535.herokuapp.com/products")
+        fetch("https://secret-wave-59643.herokuapp.com/products")
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, []);
