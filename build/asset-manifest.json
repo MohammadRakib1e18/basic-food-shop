@@ -1,25 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.42e43c23.chunk.css",
-    "main.js": "/static/js/main.a4e993e1.chunk.js",
-    "main.js.map": "/static/js/main.a4e993e1.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.810eaf55.js",
-    "runtime-main.js.map": "/static/js/runtime-main.810eaf55.js.map",
-    "static/js/2.ff5ff94b.chunk.js": "/static/js/2.ff5ff94b.chunk.js",
-    "static/js/2.ff5ff94b.chunk.js.map": "/static/js/2.ff5ff94b.chunk.js.map",
-    "static/js/3.89bb1314.chunk.js": "/static/js/3.89bb1314.chunk.js",
-    "static/js/3.89bb1314.chunk.js.map": "/static/js/3.89bb1314.chunk.js.map",
+    "main.css": "/static/css/main.90997ccf.chunk.css",
+    "main.js": "/static/js/main.6dd5fba2.chunk.js",
+    "main.js.map": "/static/js/main.6dd5fba2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.280ad574.js",
+    "runtime-main.js.map": "/static/js/runtime-main.280ad574.js.map",
+    "static/js/2.a81bd804.chunk.js": "/static/js/2.a81bd804.chunk.js",
+    "static/js/2.a81bd804.chunk.js.map": "/static/js/2.a81bd804.chunk.js.map",
+    "static/js/3.18e74b30.chunk.js": "/static/js/3.18e74b30.chunk.js",
+    "static/js/3.18e74b30.chunk.js.map": "/static/js/3.18e74b30.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.42e43c23.chunk.css.map": "/static/css/main.42e43c23.chunk.css.map",
-    "static/js/2.ff5ff94b.chunk.js.LICENSE.txt": "/static/js/2.ff5ff94b.chunk.js.LICENSE.txt",
-    "static/media/banner1.26fb273d.jpg": "/static/media/banner1.26fb273d.jpg",
-    "static/media/buyer3.439c8070.jpg": "/static/media/buyer3.439c8070.jpg",
-    "static/media/buyer4.1d903163.jpg": "/static/media/buyer4.1d903163.jpg"
+    "static/css/main.90997ccf.chunk.css.map": "/static/css/main.90997ccf.chunk.css.map",
+    "static/js/2.a81bd804.chunk.js.LICENSE.txt": "/static/js/2.a81bd804.chunk.js.LICENSE.txt",
+    "static/media/delivery-banner.3b3c29f3.png": "/static/media/delivery-banner.3b3c29f3.png",
+    "static/media/emptyPage.b4695c08.jpg": "/static/media/emptyPage.b4695c08.jpg",
+    "static/media/founder1.59000986.jpg": "/static/media/founder1.59000986.jpg",
+    "static/media/founder2.c691723f.jpg": "/static/media/founder2.c691723f.jpg",
+    "static/media/founder3.c1486ead.jpg": "/static/media/founder3.c1486ead.jpg",
+    "static/media/get-in-touch.c86c2a27.png": "/static/media/get-in-touch.c86c2a27.png",
+    "static/media/process1.c748db69.png": "/static/media/process1.c748db69.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.810eaf55.js",
-    "static/js/2.ff5ff94b.chunk.js",
-    "static/css/main.42e43c23.chunk.css",
-    "static/js/main.a4e993e1.chunk.js"
+    "static/js/runtime-main.280ad574.js",
+    "static/js/2.a81bd804.chunk.js",
+    "static/css/main.90997ccf.chunk.css",
+    "static/js/main.6dd5fba2.chunk.js"
   ]
 }
