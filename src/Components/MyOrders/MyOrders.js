@@ -25,7 +25,6 @@ const MyOrders = ({ _id }) => {
 
     // DELETE AN USER
     const handleDeleteUser = (id) => {
-
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -43,7 +42,11 @@ const MyOrders = ({ _id }) => {
                     .then((res) => res.json())
                     .then((data) => {
                         if (data.deletedCount > 0) {
-                            Swal.fire("Deleted!", "Your file has been deleted.", "success");
+                            Swal.fire(
+                                "Deleted!",
+                                "Your file has been deleted.",
+                                "success"
+                            );
                             const remainingOrders = orders.filter(
                                 (order) => order._id !== id
                             );
@@ -52,7 +55,6 @@ const MyOrders = ({ _id }) => {
                     });
             }
         });
-
     };
     return (
         <div>
@@ -61,7 +63,7 @@ const MyOrders = ({ _id }) => {
                 <span className="text-success"> order</span>
             </h2>
             <hr />
-            {(!orders.length) ? (
+            {!orders.length ? (
                 <div>
                     <img style={{ maxWidth: "50%" }} src={emptyPage} alt="" />
                     <br />
@@ -159,13 +161,16 @@ const MyOrders = ({ _id }) => {
                                         />
                                     </TableCell>
                                     <TableCell
-                                        style={{ fontSize: "1em" }}
+                                        style={{
+                                            fontSize: "1em",
+                                            color: "chocolate",
+                                        }}
                                         align="right"
                                     >
                                         {order.foodName}
                                     </TableCell>
                                     <TableCell
-                                        style={{ fontSize: "1em" }}
+                                        style={{ fontSize: "1em", color: "royalblue"}}
                                         align="right"
                                     >
                                         {order.phone}

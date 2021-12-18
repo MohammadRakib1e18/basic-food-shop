@@ -15,6 +15,7 @@ import AuthProvider from './Components/Contexts/AuthProvider';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import Booking from './Components/Booking/Booking';
 import Register from './Components/Login/Register/Register';
+import Review from './Components/AddReview/Review.js';
 
 function App() {
   return (
@@ -46,6 +47,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path='/addService'>
               <AddService></AddService>
+            </PrivateRoute>
+            <PrivateRoute path='/addReview'>
+              <Review/>
             </PrivateRoute>
             <PrivateRoute path='/manageOrder'>
               <ManageOrders></ManageOrders>

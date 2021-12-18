@@ -1,10 +1,17 @@
-import {Button } from "@mui/material";
-import React, { useState } from "react";
+import { Button } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AddProduct = () => {
     const [product, setProduct] = useState({});
+    const [services, setServices] = useState([]);
+
+    useEffect(() => {
+        fetch("https://secret-wave-59643.herokuapp.com/services")
+            .then((res) => res.json())
+            .then((data) => setServices(data));
+    }, []);
 
     const handleOnBlur = (e) => {
         const field = e.target.name;
@@ -13,28 +20,27 @@ const AddProduct = () => {
         newProduct[field] = value;
         setProduct(newProduct);
     };
-    
+
     const submitProduct = (e) => {
-        fetch('https://secret-wave-59643.herokuapp.com/productAdded', {
-            method: 'POST', 
+        fetch("https://secret-wave-59643.herokuapp.com/productAdded", {
+            method: "POST",
             headers: {
-                'content-type': 'application/json'
+                "content-type": "application/json",
             },
-            body: JSON.stringify(product)
+            body: JSON.stringify(product),
         })
-        .then(res=>res.json())
-        .then(data=>{
-            if(data.result.insertedId){
-                
-                Swal.fire({
-                    position: 'middle',
-                    icon: 'success',
-                    title: 'Product Added Successfully!',
-                    showConfirmButton: false,
-                    timer: 1500
-                  })
-            }
-        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.result.insertedId) {
+                    Swal.fire({
+                        position: "middle",
+                        icon: "success",
+                        title: "Product Added Successfully!",
+                        showConfirmButton: false,
+                        timer: 1500,
+                    });
+                }
+            });
 
         e.preventDefault();
     };
@@ -47,7 +53,10 @@ const AddProduct = () => {
             <hr />
             <form onSubmit={submitProduct}>
                 <div className="mb-3 w-50 m-auto">
-                    <label htmlFor="exampleFormControlInput1" className="form-label">
+                    <label
+                        htmlFor="exampleFormControlInput1"
+                        className="form-label"
+                    >
                         Enter Food Name
                     </label>
                     <input
@@ -60,7 +69,10 @@ const AddProduct = () => {
                     />
                 </div>
                 <div className="mb-3 w-50 m-auto">
-                    <label htmlFor="exampleFormControlInput1" className="form-label">
+                    <label
+                        htmlFor="exampleFormControlInput1"
+                        className="form-label"
+                    >
                         Food's Image URL
                     </label>
                     <input
@@ -73,7 +85,10 @@ const AddProduct = () => {
                     />
                 </div>
                 <div className="mb-3 w-50 m-auto">
-                    <label htmlFor="exampleFormControlInput1" className="form-label">
+                    <label
+                        htmlFor="exampleFormControlInput1"
+                        className="form-label"
+                    >
                         Price
                     </label>
                     <input
@@ -87,7 +102,10 @@ const AddProduct = () => {
                     />
                 </div>
                 <div className="mb-3 w-50 m-auto">
-                    <label htmlFor="exampleFormControlTextarea1" className="form-label">
+                    <label
+                        htmlFor="exampleFormControlTextarea1"
+                        className="form-label"
+                    >
                         Short Description
                     </label>
                     <textarea
@@ -99,15 +117,28 @@ const AddProduct = () => {
                         required
                     ></textarea>
                 </div>
-                <Button
-                    sx={{ width: "25%", m: 1 }}
-                    type="submit"
-                    variant="contained"
-                >
-                    Upload the Product
-                </Button>
+                {services.length < 10 ? (
+                    <Button
+                        sx={{ width: "25%", m: 1 }}
+                        type="submit"
+                        variant="contained"
+                    >
+                        Upload the Product
+                    </Button>
+                ) : (
+                    <Button
+                        sx={{ width: "25%", m: 1 }}
+                        type="submit"
+                        variant="contained"
+                        disabled
+                    >
+                        Sorry! Total Products are too enough to add a new product
+                    </Button>
+                )}
             </form>
-            <Link to='/home' className="btn btn-secondary">Back to Home</Link>
+            <Link to="/home" className="btn btn-secondary">
+                Back to Home
+            </Link>
         </div>
     );
 };

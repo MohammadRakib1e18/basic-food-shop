@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Nav } from 'react-bootstrap';
+import { Button} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import './Header.css';
@@ -18,6 +18,7 @@ const Header = () => {
                             <NavLink to='/myOrders'>My Orders</NavLink>
                             <NavLink to='/manageOrder'>All Orders</NavLink>
                             <NavLink to='/addService'>Add Service</NavLink>
+                            <NavLink to='/addReview'>Add Reivew</NavLink>
                             <span style={{ color: 'rgb(200,200,100)' }}>Hello, {user.displayName} </span>
                             <Button onClick={logout} variant="secondary" size="sm">Logout</Button>
                         </span>

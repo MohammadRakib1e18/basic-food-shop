@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import useAuth from "./../hooks/useAuth";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -9,6 +8,8 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
+import emptyPage from "./../../Images/emptyPage.jpg";
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
@@ -65,6 +66,43 @@ const MyOrders = () => {
                 <span className="text-danger">({orders.length})</span>
             </h5>
             <hr />
+            {!orders.length ? (
+                <div>
+                    <img style={{ maxWidth: "50%" }} src={emptyPage} alt="" />
+                    <br />
+                    <Link to="/services">
+                        <button
+                            style={{ marginTop: "-237px", width: "15%" }}
+                            className="btn btn-warning text-primary fw-bolder"
+                        >
+                            Visit to Order
+                        </button>
+                    </Link>
+                    <hr
+                        style={{
+                            width: "50%",
+                            margin: "auto",
+                            padding: "2px",
+                            marginTop: "20px",
+                        }}
+                    />
+                    <h5
+                        className="text-secondary"
+                        style={{ marginTop: "5px", marginBottom: "5px" }}
+                    >
+                        Oops! You've{" "}
+                        <span className="text-warning fs-1">Not Ordered</span>{" "}
+                        any food
+                    </h5>
+                    <hr
+                        style={{
+                            width: "50%",
+                            margin: "auto",
+                            padding: "2px",
+                            marginBottom: "10px",
+                        }}
+                    />
+                </div>):(
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
@@ -167,7 +205,7 @@ const MyOrders = () => {
                         ))}
                     </TableBody>
                 </Table>
-            </TableContainer>
+            </TableContainer>)}
         </div>
     );
 };
