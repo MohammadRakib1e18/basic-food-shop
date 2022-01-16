@@ -9,7 +9,7 @@ import founder1 from "../../Images/founder1.jpg";
 import founder2 from "../../Images/founder2.jpg";
 import founder3 from "../../Images/founder3.jpg";
 import Services from "../Services/Services";
-import ReviewList from './../ReviewList/ReviewList';
+import ReviewList from "./../ReviewList/ReviewList";
 
 const Home = () => {
     return (
@@ -28,7 +28,11 @@ const Home = () => {
                 <h2>Total Visitors</h2>
                 <hr />
                 {/* <!-- hitwebcounter Code START --> */}
-                <a href="https://www.hitwebcounter.com" target="_blank" rel="noreferrer">
+                <a
+                    href="https://www.hitwebcounter.com"
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     <img
                         src="https://hitwebcounter.com/counter/counter.php?page=7900089&style=0025&nbdigits=5&type=page&initCount=0"
                         title="Free Counter"
@@ -43,7 +47,7 @@ const Home = () => {
             <ReviewList></ReviewList>
 
             {/* connection-process */}
-            <div className="connection-container mt-5">
+            <div className="connection-container mt-5 bg-secondary">
                 <div className="text-center">
                     <h5 className="text-secondary">OUR PROCESS</h5>
                     <h1>Go Direct-To-Consumer With FoodBike</h1>
@@ -71,24 +75,26 @@ const Home = () => {
 
             {/* team founder */}
             <hr />
-            <h1 className="text-center text-secondary my-3">
-                Our Team Founder
-            </h1>
-            <div className="founders text-center">
-                <div className="founder">
-                    <img src={founder1} alt="" />
-                    <h3>Dr. Alex Furgosen</h3>
-                    <h6>CENCER SPEICIALIST</h6>
-                </div>
-                <div className="founder">
-                    <img src={founder2} alt="" />
-                    <h3>Dr.Robert Smith</h3>
-                    <h6>HEART SURGON</h6>
-                </div>
-                <div className="founder">
-                    <img src={founder3} alt="" />
-                    <h3>Dr. Sharmin</h3>
-                    <h6>FEMALE PHYSICIAN</h6>
+            <div className="bg-secondary">
+                <h1 className="text-center text-secondary my-3">
+                    Our Team Founder
+                </h1>
+                <div className="founders text-center">
+                    <div className="founder">
+                        <img src={founder1} alt="" />
+                        <h3>Dr. Alex Furgosen</h3>
+                        <h6>CENCER SPEICIALIST</h6>
+                    </div>
+                    <div className="founder">
+                        <img src={founder2} alt="" />
+                        <h3>Dr.Robert Smith</h3>
+                        <h6>HEART SURGON</h6>
+                    </div>
+                    <div className="founder">
+                        <img src={founder3} alt="" />
+                        <h3>Dr. Sharmin</h3>
+                        <h6>FEMALE PHYSICIAN</h6>
+                    </div>
                 </div>
             </div>
         </div>
